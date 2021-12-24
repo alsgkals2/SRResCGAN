@@ -55,7 +55,7 @@ class LRHRDataset(Dataset):
         if self.paths_LR and self.paths_HR:
             assert len(self.paths_LR) == len(self.paths_HR), \
                 '[Error] HR: [%d] and LR: [%d] have different number of images.'%(
-                len(self.paths_LR), len(self.paths_HR))
+                len(self.paths_HR), len(self.paths_LR))
     
     def __getitem__(self, idx):
         lr, hr, lr_path, hr_path = self._load_file(idx)
