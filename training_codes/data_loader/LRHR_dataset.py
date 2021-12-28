@@ -25,8 +25,8 @@ class LRHRDataset(Dataset):
         dataroot_LR = []
         
         if self.train:
-            self.dataroot_hr = dataroot+'DF2K/generated/HR/'
-            self.dataroot_lr = dataroot+'DF2K/generated/LR/'
+            self.dataroot_hr = dataroot+'DIV2K/generated/HR/'
+            self.dataroot_lr = dataroot+'DIV2K/generated/LR/'
             
             # read image list from image/binary files
             self.paths_imgs_hr = common.get_image_paths("img", self.dataroot_hr)
@@ -36,8 +36,8 @@ class LRHRDataset(Dataset):
             LR_list = dataroot_LR + self.paths_imgs_lr 
 
         else:
-            self.dataroot_hr = dataroot+'DF2K/valid/clean/'
-            self.dataroot_lr = dataroot+'DF2K/valid/corrupted/'
+            self.dataroot_hr = dataroot+'DIV2K/valid/clean/'
+            self.dataroot_lr = dataroot+'DIV2K/valid/gaussian/valid_LR'
             
             self.paths_imgs_hr = common.get_image_paths("img", self.dataroot_hr)
             self.paths_imgs_lr = common.get_image_paths("img", self.dataroot_lr)

@@ -47,7 +47,7 @@ for path_lr in glob.glob(test_img_folder):
     print('{:->4d}--> {:>10s}, time: {:.4f} sec.'.format(idx, base, end_time))
     
     # save images            
-    cv2.imwrite('sr_results_x4/{:s}.png'.format(base), output_sr)
+    cv2.imwrite(f'{dataset}_results_x4/{base}.png', output_sr)
     
     del img_LR, img_lr
     del  output_SR, output_sr

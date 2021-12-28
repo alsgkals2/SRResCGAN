@@ -146,17 +146,17 @@ def main():
         os.makedirs(best_lpips_save_path)
 
     # save train images path
-    save_train_imgs_path = opt.saveImgsPath+'_x'+str(opt.upscale_factor)+'/train_imgs/'
+    save_train_imgs_path = opt.saveImgsPath+f'_{dataset}_x'+str(opt.upscale_factor)+'/train_imgs/'
     if not os.path.exists(save_train_imgs_path):
         os.makedirs(save_train_imgs_path)
     
     # save test images path
-    save_test_imgs_path = opt.saveImgsPath+'_x'+str(opt.upscale_factor)+'/test_imgs/' 
+    save_test_imgs_path = opt.saveImgsPath+f'_{dataset}_x'+str(opt.upscale_factor)+'/test_imgs/' 
     if not os.path.exists(save_test_imgs_path):
         os.makedirs(save_test_imgs_path)
     
     # logs path
-    logs_save_path =  opt.saveLogsPath+'_x'+str(opt.upscale_factor)+'/'
+    logs_save_path =  opt.saveLogsPath+f'_{dataset}_x'+str(opt.upscale_factor)+'/'
     if not os.path.exists(logs_save_path):
         os.makedirs(logs_save_path)
     

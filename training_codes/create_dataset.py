@@ -18,8 +18,8 @@ parser.add_argument('--upscale_factor', default=4, type=int, choices=[4], help='
 opt = parser.parse_args()
 
 # define input and target directories
-input_target_hr_dir = 'datasets/DF2K/HR_target/' # HR_target
-input_target_lr_dir = 'datasets/DF2K/LR_target/' # LR_target
+input_target_hr_dir = 'datasets/DIV2K/DIV2K_train_HR/' # HR_target
+input_target_lr_dir = 'datasets/DIV2K/DIV2K_train_LR/X4' # LR_target
 target_hr_files = [os.path.join(input_target_hr_dir, x) for x in os.listdir(input_target_hr_dir) if utils.is_image_file(x)]
 target_lr_files = [os.path.join(input_target_lr_dir, x) for x in os.listdir(input_target_lr_dir) if utils.is_image_file(x)]
 
